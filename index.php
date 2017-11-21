@@ -16,5 +16,7 @@ include "scripts.php";
             <label>Enter a name to search:</label> &nbsp;
             <input name="search" id="search" class="form form-group" required onkeydown="findmatch();">
         </form>
+        <div id="results">
+        </div>
     </span>
 </div>

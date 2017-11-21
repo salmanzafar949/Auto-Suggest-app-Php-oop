@@ -36,5 +36,3 @@ class DbConn{
         }
     }
 }
-
-$db = DbConn::get_instance();

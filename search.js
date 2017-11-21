@@ -1,5 +1,5 @@
 function findmatch() {
-    if (window..XMLHttpRequest)
+    if (window.XMLHttpRequest)
     {
            xmlhttp = new XMLHttpRequest();
     }
@@ -17,6 +17,6 @@ function findmatch() {
         
     }
 
-    xmlhttp.open('GEt','search.php',true);
+    xmlhttp.open('GEt','search.php?search='+document.s_form.search.value,true);
     xmlhttp.send();
 }

@@ -15,8 +15,7 @@ include "scripts.php";
         <form class="form form-horizontal" name="s_form" id="s_form">
             <label>Enter a name to search:</label> &nbsp;
             <input name="search" id="search" class="form form-group" required onkeyup="findmatch();">
+            <div id="results"></div>
         </form>
-        <div id="results">
-        </div>
     </span>
 </div>

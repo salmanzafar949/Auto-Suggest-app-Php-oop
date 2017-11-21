@@ -15,16 +15,20 @@ class Search{
             $search = $_GET['search'];
             if(!empty($search))
             {
-                $db   = new DbConn();
-                $conn = $dn->conn;
+                $db   = DbConn::get_instance();
+                $conn = $db->conn;
                 $sql = "SELECT name FROM `users` WHERE name='$search'";
                 $res = $conn->query($sql);
                 if($res->num_rows > 0)
                 {
-                    while ($row = $res->mysqli_fetch_assoc())
+                    while ($row = $res->fetch_assoc())
                     {
                           return $row['name'];
                     }
+                }
+                else
+                {
+                    return "No Match found";
                 }
             }
             else

@@ -33,7 +33,7 @@ class Search{
             }
             else
             {
-                echo "Cannot be empty";
+                return "Cannot be empty";
             }
         }
     }
